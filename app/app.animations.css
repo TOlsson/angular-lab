@@ -1,0 +1,57 @@
+.view-frame {
+    background: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 72px;
+}
+.view-frame.ng-enter {
+    animation: 0.5s fade-in;
+    animation-timing-function: ease-in;
+}
+.view-frame.ng-leave {
+    animation: 0.4s fade-out;
+    animation-timing-function: ease-out;
+}
+@keyframes fade-in {
+    from {opacity: 0; }
+    to   {opacity: 1; }
+}
+@keyframes fade-out {
+    from {opacity: 1; }
+    to   {opacity: 0; }
+}
+
+.first-forecast {
+    position: relative;
+    animation: 0.75s slide-In;
+}
+@keyframes slide-In {
+    from {top: -400px; }
+    to   {top: 0px;  }
+}
+@keyframes slide-Out {
+    from {left: 0px;  }
+    to   {left: 400px; }
+}
+
+.forecastitem.ng-enter,
+.forecast-item.ng-leave,
+.forecast-item.ng-move {
+    transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+ .forecast-item.ng-enter,
+ .forecast-item.ng-move {
+     opacity:0;
+     top 120px;
+     leaft: 0;
+     right: 0;
+ }
+
+ .forecast-item.ng-enter.ng-enter-active,
+ .forecast-item.n-move.ng-move-active {
+     opacity: 1;
+     top: 0;
+     left: 0;
+     right: 0;
+ }
